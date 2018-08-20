@@ -11,6 +11,9 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+import py3nvml
+py3nvml.grab_gpus(num_gpus=1, gpu_fraction=0.9)
+
 import cv2
 import time
 import sys

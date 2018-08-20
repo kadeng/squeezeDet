@@ -1,0 +1,15 @@
+
+Installation instructions for a tensorrt compatible anaconda3 environment.
+
+Assuming the tensorrt installation package has been extracted to ~/install/tensorrt/TensorRT-4.0.1.6
+cp -rav ~/install/tensorrt/TensorRT-4.0.1.6/* ~/opt
+cp lib/* ~/opt/lib
+cp bin/* ~/opt/bin
+conda create -n tensorrt python=3.5 anaconda tensorflow-gpu joblib opencv
+source activate tensorrt
+pip install easydict joblib py3nvml msgpack
+cd ~/install/tensorrt/TensorRT-4.0.1.6
+pip install graphsurgeon/graphsurgeon-0.2.0-py2.py3-none-any.whl
+pip install python/tensorrt-4.0.1.6-cp35-cp35m-linux_x86_64.whl
+Following that, you always need to enable tensorrt via "source activate tensorrt".
+Within PyCharm, you need to set up the corresponding conda environment for remote debugging / running etc. See https://www.jetbrains.com/help/pycharm/conda-support-creating-conda-virtual-environment.html

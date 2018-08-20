@@ -607,7 +607,7 @@ void saveAndPlotPlots(string dir_name,string file_name,string obj_type,vector<do
 
     // set labels and ranges
     fprintf(fp,"set size ratio 0.7\n");
-    fprintf(fp,"set xrange [0:1]\n");
+    fprintf(fp,"set range [0:1]\n");
     fprintf(fp,"set yrange [0:1]\n");
     fprintf(fp,"set xlabel \"Recall\"\n");
     if (!is_aos) fprintf(fp,"set ylabel \"Precision\"\n");
